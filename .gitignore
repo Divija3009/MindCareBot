@@ -1,0 +1,7 @@
+data/
+config.json
+__pycache__
+streamlit_embed_1.html
+.DS_Store
+Chatbot/backend/.env
+Chatbot/backend/config.json
