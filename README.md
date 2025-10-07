@@ -1,4 +1,4 @@
-# Empower Mental Health Chatbot
+# Empower Mental Health using MindCareBot
 
 A culturally sensitive AI-powered mental health chatbot using LangChain, GPT-4, Pinecone, and Flask. Developed as a master's capstone project at San José State University.
 ---
