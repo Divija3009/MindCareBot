@@ -21,7 +21,6 @@ See Chapter 1: Introduction, Goals, and Contributions
 
 ## Architecture Overview
 
-**Refer to Report: Chapter 2 – Project Architecture**
 
 ```
 Frontend (React) <--> Flask Backend (LangChain + GPT-4) <--> PostgreSQL + Pinecone
@@ -34,28 +33,6 @@ Frontend (React) <--> Flask Backend (LangChain + GPT-4) <--> PostgreSQL + Pineco
 - Dual Path Ranking: GPT-4 ranks both responses for final reply  
 
 ---
-
-## Component Mapping to Report
-
-| Component | Description | Code Path | Report Chapter |
-|----------|-------------|-----------|----------------|
-| Frontend | Chat UI with voice input, TTS playback, therapist map | `frontend/components/` | Ch. 4.1, 5.1 |
-| Chatbot Logic | Core LLM flow, RAG, prompt building, ranking | `backend/chatbot_logic.py` | Ch. 2.2.3, 5.2.1 |
-| Crisis Detection | BERT + GPT logic to detect emotional danger | `chatbot_logic.py` | Ch. 2.2.2, 4.2.3 |
-| Router Agent | Orchestrates tool usage with LangChain | `backend/agents/router_agent.py` | Ch. 2.2.4, 4.2.1 |
-| Pinecone Search Tool | Vector DB lookup using OpenAI embeddings | `backend/tools/pinecone_search_tool.py` | Ch. 4.2.2, 5.3.2 |
-| Web Search Tool | DuckDuckGo real-time fallback | `tools/web_search_tool.py`, `web_search_beautiful.py` | Ch. 3.3.3 |
-| Chat Summary Tool | Fetches previous summaries for continuity | `tools/chat_summary_tool.py` | Ch. 5.2.3 |
-| Therapist Locator | Google Maps API to suggest local help | `tools/nearest_therapist_tool.py` | Ch. 2.2.6, 5.3.3 |
-| Memory Buffer | Stores prior chat context in session | `utils/memory_manager.py` | Ch. 3.3.1 |
-| Session API | User auth, chat summary, therapist API | `backend/api_for_db.py` | Ch. 5.2.3 |
-| Data Embedding | Indexes JSON, PDF, scraped content | `pinecone_rag.py` | Ch. 5.3.5 |
-| PostgreSQL Setup | Stores users, chats, crisis logs, therapists | `backend/connection.py` | Ch. 4.3.1 |
-| Speech Modules | STT (browser-based), TTS (gTTS) | `ChatArea.jsx`, `chatbot_logic.py` | Ch. 5.1.2 |
-| Security | bcrypt password hashing, CORS, JWT-ready | `api_for_db.py`, `.env` | Ch. 5.3.4 |
-
----
-
 ## Features
 
 | Feature | Description |
@@ -142,13 +119,3 @@ Make sure the Flask backend is running on `localhost:5001`.
 
 ---
 
-## Authors & Credits
-
-**Team Members:**  
-Sai Pranavi Kurapati, Sayali Bayaskar, Divija Choudhary, Armaghan Abtahi
-
-**Advisor:**  
-Professor Kaikai Liu
-
-**Final Report (PDF)**  
-GitHub Repo: https://github.com/SayaliVB/MentalHealthChatbot
