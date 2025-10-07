@@ -1,9 +1,7 @@
 # Empower Mental Health Chatbot
 
 A culturally sensitive AI-powered mental health chatbot using LangChain, GPT-4, Pinecone, and Flask. Developed as a master's capstone project at San José State University.
-
 ---
-
 ## Project Overview
 
 This chatbot addresses global mental health challenges by:
@@ -14,14 +12,7 @@ This chatbot addresses global mental health challenges by:
 - Enabling real-time voice/text interaction with TTS/STT  
 - Logging sessions for therapist reviews and continuity  
 
-**Final Report Reference:**  
-See Chapter 1: Introduction, Goals, and Contributions  
-
----
-
 ## Architecture Overview
-
-
 ```
 Frontend (React) <--> Flask Backend (LangChain + GPT-4) <--> PostgreSQL + Pinecone
                     ↳ Tools: PineconeSearch | WebSearch | ChatSummary | NearestTherapist
@@ -88,17 +79,15 @@ Make sure the Flask backend is running on `localhost:5001`.
 
 ## Testing
 
-- ✅ 50 Test cases for Routing Agent – 88% accuracy  
-- ✅ 50 Crisis Detection inputs – 94% accuracy  
-- ✅ GPT-4 Evaluator scores (Empathy, Safety, Fluency)  
-- ✅ Manual testing: TTS, STT, Therapist Locator  
-- ✅ UI/UX tested across browsers and devices  
+- 50 Test cases for Routing Agent – 88% accuracy  
+- 50 Crisis Detection inputs – 94% accuracy  
+- GPT-4 Evaluator scores (Empathy, Safety, Fluency)  
+- Manual testing: TTS, STT, Therapist Locator  
+- UI/UX tested across browsers and devices  
 
 ---
 
 ## Dataset Overview
-
-**Mapped to Report Section 5.3.5**
 
 | Dataset Type | Description | Pinecone Namespace |
 |--------------|-------------|--------------------|
@@ -116,6 +105,5 @@ Make sure the Flask backend is running on `localhost:5001`.
 - Currently tested on **localhost**
 - Future-ready for deployment on **Heroku**, **Render**, or **AWS**
 - Requires `.env` for OpenAI, Pinecone, and Google Maps API keys
-
 ---
 
